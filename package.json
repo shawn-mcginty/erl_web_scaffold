@@ -1,0 +1,41 @@
+{
+  "name": "elixir_sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "init-db": "psql postgres < tools/init-db.sql",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "npm run cp-animate && node ./tools/dev_server.js",
+    "node-sass": "node ./node_modules/node-sass/bin/node-sass",
+    "webpack": "node ./node_modules/webpack/bin/webpack",
+    "clean-lib-fonts": "rm -rf priv/public/fonts/lib",
+    "clean-lib-assets": "rm -rf priv/public/svgs",
+    "cp-animate": "cp -f ./node_modules/animate.css/animate.min.css priv/public/stylesheets/animate.min.css",
+    "cp-lib-svgs": "mkdir -p priv/public/svgs/lib && cp -r ./node_modules/@fortawesome/fontawesome-free/svgs priv/public/svgs/lib/fa",
+    "cp-lib-fonts": "mkdir -p priv/public/fonts/lib && cp -r ./node_modules/@fortawesome/fontawesome-free/webfonts priv/public/fonts/lib/fa",
+    "cp-lib-assets": "npm run cp-lib-fonts && npm run cp-lib-svgs",
+    "build-js": "webpack",
+    "build-sass": "node ./node_modules/node-sass/bin/node-sass client/stylesheets/main.scss -o priv/public/stylesheets --output-style compressed --source-map true",
+    "build": "npm run cp-animate && npm run clean-lib-fonts && npm run clean-lib-assets && npm run cp-lib-fonts && npm run cp-lib-assets && npm run build-sass && npm run build-js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "animate.css": "^3.7.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "devDependencies": {
+    "bulma": "^0.7.1",
+    "node-sass": "^4.9.3",
+    "ps-tree": "^1.1.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}

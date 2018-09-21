@@ -1,0 +1,11 @@
+.idea
+_build
+deps
+log
+node_modules
+priv/public/fonts
+priv/public/js
+priv/public/stylesheets
+priv/public/svgs
+*.iml
+*.dump

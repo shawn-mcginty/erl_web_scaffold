@@ -1,0 +1,10 @@
+%{
+  "cowboy": {:hex, :cowboy, "2.4.0", "f1b72fabe9c8a5fc64ac5ac85fb65474d64733d1df52a26fad5d4ba3d9f70a9f", [:rebar3], [{:cowlib, "~> 2.3.0", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.5.0", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
+  "cowlib": {:hex, :cowlib, "2.3.0", "bbd58ef537904e4f7c1dd62e6aa8bc831c8183ce4efa9bd1150164fe15be4caa", [:rebar3], [], "hexpm"},
+  "dialyxir": {:hex, :dialyxir, "0.5.1", "b331b091720fd93e878137add264bac4f644e1ddae07a70bf7062c7862c4b952", [:mix], [], "hexpm"},
+  "epgsql": {:hex, :epgsql, "4.1.0", "4ddf70f2a08a4cb96920f1dc488ac6745beb7e646b77f282c78b48ab81f72275", [:rebar3], [], "hexpm"},
+  "goldrush": {:hex, :goldrush, "0.1.9", "f06e5d5f1277da5c413e84d5a2924174182fb108dabb39d5ec548b27424cd106", [:rebar3], [], "hexpm"},
+  "lager": {:hex, :lager, "3.6.5", "831910109f3fcb503debf658ca0538836b348c58bfbf349a6d48228096ce9040", [:rebar3], [{:goldrush, "0.1.9", [hex: :goldrush, repo: "hexpm", optional: false]}], "hexpm"},
+  "mix_erlang_tasks": {:hex, :mix_erlang_tasks, "0.1.0", "36819fec60b80689eb1380938675af215565a89320a9e29c72c70d97512e4649", [:mix], [], "hexpm"},
+  "ranch": {:hex, :ranch, "1.5.0", "f04166f456790fee2ac1aa05a02745cc75783c2bfb26d39faf6aefc9a3d3a58a", [:rebar3], [], "hexpm"},
+}
